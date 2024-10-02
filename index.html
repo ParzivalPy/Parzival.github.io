@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="titre">
+        <p class="title">Weather Viewer</p>
+      </div>
+      <div class="inputs">
+        <input
+          class="input1"
+          type="text"
+          placeholder=" OPTION 1 - City"
+          id="cityName"
+        />
+        <div class="comboBox" id="comboId">
+          <select id="comboList" title="Proposed City" class="input1">
+            <option value="vide">Start by typing a city name...</option>
+          </select>
+        </div>
+        <button class="input1" id="cityButton">Rechercher</button>
+      </div>
+      <hr />
+      <div class="days">
+        <button class="daysButton" id="daysButton1">Jour 1</button>
+        <button class="daysButton" id="daysButton2">Jour 2</button>
+        <button class="daysButton" id="daysButton3">Jour 3</button>
+        <button class="daysButton" id="daysButton4">Jour 4</button>
+        <button class="daysButton" id="daysButton5">Jour 5</button>
+        <button class="daysButton" id="daysButton6">Jour 6</button>
+        <button class="daysButton" id="daysButton7">Jour 7</button>
+      </div>
+      <div class="graphique">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</html>

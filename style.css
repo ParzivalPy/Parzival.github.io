@@ -1,0 +1,84 @@
+html {
+  margin: 0;
+  font-family: "Arial";
+  background: linear-gradient(45deg, #fe938c, #e6b89c, #ead2ac);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+}
+
+.app {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 50px;
+  flex-direction: row;
+  margin: 20px;
+  text-align: center;
+}
+
+.title {
+  font-family: "Arial";
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+.tableau {
+  margin: 20px;
+  padding: 4px;
+  width: 100% - 40px;
+  overflow: auto;
+  white-space: nowrap;
+  border: #000000 solid 2px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0e4b48;
+  border-radius: 10px;
+}
+
+.daysButton {
+  margin: 0;
+  border: 0;
+  background-color: #ffffff;
+}
+
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.inputs > * {
+  border: 2px solid #000000;
+  border-radius: 50px;
+  background-color: transparent;
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  overflow: hidden;
+  min-width: 200px;
+}
+input.input1::placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+#comboList {
+  width: 100%;
+  background: transparent;
+  border: transparent;
+  outline: none;
+  text-align: center;
+}
