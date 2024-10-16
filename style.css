@@ -69,3 +69,10 @@ input.input1::placeholder {
   outline: none;
   text-align: center;
 }
+
+.graphique {
+  display: block;
+  position: relative;
+  width: 100% !important;
+  height: 400px;
+}

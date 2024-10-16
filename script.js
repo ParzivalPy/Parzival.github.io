@@ -118,9 +118,6 @@ async function meteoApi(lat, lon) {
       dataJours.push(sousListe);
     }
 
-    console.log(dataJours);
-    console.log(dataTemp);
-
     afficherGraph();
   } catch (error) {
     console.error("An error occurred:", error);
@@ -135,9 +132,13 @@ function obtenirValeurOptionSelectionnee() {
 }
 
 function afficherGraph() {
-  console.log(dataJours);
   parseDate();
-  addData(graph, dataJours[0], dataTemp[0]);
+  tempHeures = [];
+  for (i = 0; i < dataJours[0].length; i++) {
+    tempTempHour = dataJours[0][i].split("T");
+    tempHeures.push(tempTempHour[1]);
+  }
+  addData(graph, tempHeures, dataTemp[0]);
 }
 
 function parseDate() {
@@ -153,44 +154,80 @@ function parseDate() {
 const jour1 = document.getElementById("daysButton1");
 
 jour1.addEventListener("click", function () {
-  addData(graph, dataJours[0], dataTemp[0]);
+  tempHeures = [];
+  for (i = 0; i < dataJours[0].length; i++) {
+    tempTempHour = dataJours[0][i].split("T");
+    tempHeures.push(tempTempHour[1]);
+  }
+  addData(graph, tempHeures, dataTemp[0]);
 });
 
 const jour2 = document.getElementById("daysButton2");
 
 jour2.addEventListener("click", function () {
-  addData(graph, dataJours[1], dataTemp[1]);
+  tempHeures = [];
+  for (i = 0; i < dataJours[1].length; i++) {
+    tempTempHour = dataJours[1][i].split("T");
+    tempHeures.push(tempTempHour[1]);
+  }
+  addData(graph, tempHeures, dataTemp[1]);
 });
 
 const jour3 = document.getElementById("daysButton3");
 
 jour3.addEventListener("click", function () {
-  addData(graph, dataJours[2], dataTemp[2]);
+  tempHeures = [];
+  for (i = 0; i < dataJours[2].length; i++) {
+    tempTempHour = dataJours[2][i].split("T");
+    tempHeures.push(tempTempHour[1]);
+  }
+  addData(graph, tempHeures, dataTemp[2]);
 });
 
 const jour4 = document.getElementById("daysButton4");
 
 jour4.addEventListener("click", function () {
-  addData(graph, dataJours[3], dataTemp[3]);
+  tempHeures = [];
+  for (i = 0; i < dataJours[3].length; i++) {
+    tempTempHour = dataJours[3][i].split("T");
+    tempHeures.push(tempTempHour[1]);
+  }
+  addData(graph, tempHeures, dataTemp[3]);
 });
 
 const jour5 = document.getElementById("daysButton5");
 
 jour5.addEventListener("click", function () {
-  addData(graph, dataJours[4], dataTemp[4]);
+  tempHeures = [];
+  for (i = 0; i < dataJours[4].length; i++) {
+    tempTempHour = dataJours[4][i].split("T");
+    tempHeures.push(tempTempHour[1]);
+  }
+  addData(graph, tempHeures, dataTemp[4]);
 });
 
 const jour6 = document.getElementById("daysButton6");
 
 jour6.addEventListener("click", function () {
-  addData(graph, dataJours[5], dataTemp[5]);
+  tempHeures = [];
+  for (i = 0; i < dataJours[5].length; i++) {
+    tempTempHour = dataJours[5][i].split("T");
+    tempHeures.push(tempTempHour[1]);
+  }
+  addData(graph, tempHeures, dataTemp[5]);
 });
 
 const jour7 = document.getElementById("daysButton7");
 
 jour7.addEventListener("click", function () {
-  addData(graph, dataJours[6], dataTemp[6]);
+  tempHeures = [];
+  for (i = 0; i < dataJours[6].length; i++) {
+    tempTempHour = dataJours[6][i].split("T");
+    tempHeures.push(tempTempHour[1]);
+  }
+  addData(graph, tempHeures, dataTemp[6]);
 });
+
 const ctx = document.getElementById("myChart");
 
 const graph = new Chart(ctx, {
@@ -211,13 +248,13 @@ const graph = new Chart(ctx, {
         down: 20,
       },
     },
+    responsive: true,
+    maintainAspectRatio: false,
   },
 });
 
 function addData(chart, label, newData) {
   chart.data.labels = label;
   chart.data.datasets[0].data = newData;
-  console.log(newData);
-  console.log(label);
   chart.update();
 }
