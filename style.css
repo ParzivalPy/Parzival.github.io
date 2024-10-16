@@ -34,19 +34,6 @@ html {
   border-radius: 10px;
 }
 
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #0e4b48;
-  border-radius: 10px;
-}
-
 .daysButton {
   margin: 0;
   border: 0;
